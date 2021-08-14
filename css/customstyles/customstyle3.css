@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&display=swap');
 
 body {
-    font-family: 'Butterfly Kids', sans-serif;
-    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
     background-color: darkblue;
     color: #fff;
 }
@@ -17,9 +17,28 @@ h2{
     background-color: red;
 }
 
+nav{
+    position: fixed;
+    left: 1100px;
+    top: 0px;
+    opacity: 0.2;
+}
+
+nav:hover{
+    opacity: 1;
+}
+
 img{
+    max-width: 100%;
+}
+
+header img{
     width: 340px;
     height: 500px;
+    clip-path: ellipse(25% 40% at 50% 50%);
+    position: relative;
+    left: 300px;
+    top: 0px;
 }
 
 article li {
@@ -28,6 +47,10 @@ article li {
 
 li a {
     text-decoration: none;
+}
+
+.hide{
+    display: none;
 }
 
 table {
@@ -55,13 +78,33 @@ td {
 }
 
 li a {
-    background: cyan;
-    color: purple;
+    background: lightgreen;
+    color: red;
     text-decoration: none;
     font-weight: bold;
 }
 
 li a:hover {
-    background: purple;
-    color: cyan;
+    background: red;
+    color: lightgreen;
+}
+
+
+@media screen and (min-width: 600px) {
+    body {
+        font-family: 'Butterfly Kids', sans-serif;
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    li a {
+        background: cyan;
+        color: purple;
+    }
+    
+    li a:hover {
+        background: purple;
+        color: cyan;
+    }
 }
